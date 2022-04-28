@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: "flex", height: "100vh" }}>
+      <span
+        style={{
+          width: "33.33%",
+          height: "5%",
+          textAlign: "center",
+          boxShadow:
+            "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",
+        }}
+      >
+        users
+      </span>
+      <span
+        style={{
+          width: "33.33%",
+          height: "5%",
+          textAlign: "center",
+          boxShadow:
+            "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",
+        }}
+      >
+        posts
+      </span>
+      <span
+        style={{
+          width: "33.33%",
+          height: "5%",
+          textAlign: "center",
+          boxShadow:
+            "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",
+        }}
+      >
+        comments
+      </span>
     </div>
   );
 }
