@@ -2,16 +2,14 @@ import React, { useState } from "react";
 
 function App() {
   const API_URL = `https://jsonplaceholder.typicode.com/`;
-  const [users, setUsers] = useState([{}]);
-  const [posts, setPosts] = useState([{}]);
-  const [comments, setComments] = useState([{}]);
+  const [data, setData] = useState([]);
   const [reqType, setReqType] = useState("users");
 
   const fetchItems = async () => {
     try {
       const response = await fetch(`${API_URL}${reqType}`);
       const data = await response.json();
-      
+      setData(data);
     } catch {}
   };
 
@@ -51,9 +49,9 @@ function App() {
       >
         comments
       </button>
-      {users.length > 1 && (
+      {data.length > 1 && (
         <ul>
-          {users.map((item) => (
+          {data.map((item) => (
             <li>{JSON.stringify(item)}</li>
           ))}
         </ul>
